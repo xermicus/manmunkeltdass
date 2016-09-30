@@ -22,7 +22,7 @@ a{
     left: 0px;
     right: 0px;
     width: 100%;
-    height: 50px;
+    height: 90px;
     background: rgba(82,179,217,0.9);
     z-index: 100;
     -webkit-touch-callout: none;
@@ -46,9 +46,9 @@ a{
 .back img {
     position: absolute;
     top: 5px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
     background-color: rgba(255,255,255,0.98);
     border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -61,10 +61,10 @@ a{
 }
 .name{
     position: absolute;
-    top: 3px;
+    top: 6px;
     left: 110px;
     font-family: 'Helvetica';
-    font-size: 32px;
+    font-size: 68px;
     font-weight: 300;
     color: rgba(255,255,255,0.98);
     cursor: default;
@@ -87,8 +87,8 @@ a{
     background: none;
     margin: 0;
     padding: 0 0 50px 0;
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 .chat li {
     padding: 0.5rem;
@@ -190,7 +190,7 @@ a{
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
 /*}
 .msg p {*/
-    font-size: 2rem;
+    font-size: 40px;/*font-size: 2rem;*/
     margin: 0 0 0.2rem 0;
     color: #777;
 }
@@ -308,26 +308,30 @@ input.textarea {
     left: 0px;
     right: 0px;
     width: 100%;
-    height: 50px;
+    height: 90px;
     z-index: 99;
     background: #fafafa;
     border: none;
-    outline: none;
+    /*outline: none;*/
     padding-left: 15px;
-    padding-right: 55px;
+    padding-right: 150px;
     color: #666;
     font-weight: 400;
+	font-size: 40px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .emojis {
     position: fixed;
     display: block;
     bottom: 8px;
     right: 8px;
-    width: 34px;
-    height: 34px;
-    background-image: url(http://i.imgur.com/5WUpcPZ.png);
+    width: 82px;
+    height: 82px;
+    /*background-image: url(../send-button.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     z-index: 100;
     cursor: pointer;
 }

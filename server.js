@@ -24,6 +24,7 @@ io.on('connection', function(socket) {
         console.log('Client connected...');
 	
 	// spread messages after connect
+	r.setnx('m_index', 0);
 	r.get('m_index', function(err, reply) {
 	                if (err) { console.log(err) } else if (reply) {
 			pk = parseInt(reply);
@@ -42,8 +43,9 @@ io.on('connection', function(socket) {
         socket.on('post', function(data) {
                 console.log('got post: '+data.length);
 		pk = 0
+		r.setnx('m_index', 0);
 		r.get('m_index', function(err, reply) {
-			if (err) { console.log(err) } else if (reply && data.length > 0) {
+			if (err) { console.log(err) } else if (reply && data.length > 0 && data.length < 512) {
 				pk = reply
                 		r.set(pk, data, redis.print);
 				r.incr('m_index');
