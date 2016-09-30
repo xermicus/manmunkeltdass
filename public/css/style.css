@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+/*@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);*/
 
 html, body {
     background: #e5e5e5;
-    font-family: 'Arial';
+    font-family: 'Helvetica';
     margin: 0px auto;
 }
 ::selection{
@@ -63,7 +63,7 @@ a{
     position: absolute;
     top: 3px;
     left: 110px;
-    font-family: 'Arial';
+    font-family: 'Helvetica';
     font-size: 32px;
     font-weight: 300;
     color: rgba(255,255,255,0.98);
@@ -73,7 +73,7 @@ a{
     position: absolute;
     top: 30px;
     left: 115px;
-    font-family: 'Arial';
+    font-family: 'Helvetica';
     font-size: 11px;
     font-weight: 400;
     color: rgba(255,255,255,0.6);
@@ -188,8 +188,8 @@ a{
     padding: 10px;
     border-radius: 2px;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
-}
-.msg p {
+/*}
+.msg p {*/
     font-size: 2rem;
     margin: 0 0 0.2rem 0;
     color: #777;
