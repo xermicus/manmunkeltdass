@@ -22,6 +22,21 @@ app.use(express.static('public'));
 // socket.io
 io.on('connection', function(socket) {
         console.log('Client connected...');
+	
+	// spread messages after connect
+	r.get('m_index', function(err, reply) {
+	                if (err) { console.log(err) } else if (reply) {
+			pk = parseInt(reply);
+			for (i = 0; i < pk; i++) {
+				r.get(i.toString(), function(err, reply) {
+	                        if (err) { console.log(err) } else if (reply) {
+                                	socket.emit('emitpost', reply);
+                        	}
+                		});
+
+			}
+		}
+	});
         
 	// get data
         socket.on('post', function(data) {
@@ -32,28 +47,11 @@ io.on('connection', function(socket) {
 				pk = reply
                 		r.set(pk, data, redis.print);
 				r.incr('m_index');
-				socket.emit('emitpost', data);
+				io.sockets.emit('emitpost', data);
 			}
 		});
         });
 
-        // send data
-        /*var interval = setInterval(function () {
-                r.setnx('keyword', 'unset');
-		pk = 0
-		r.spop(['done'], function(err, reply) { 
-			if (err) { console.log(err) } else if (reply) {
-			pk = reply;
-			r.hgetall(pk.toString(), function(err, reply) {
-				if(err) { console.log(err) } else if (reply) {
-					socket.emit('get', reply);
-				}
-			});
-			}
-		});
-		
-
-        }, 3000);*/
 }); 
     
 // Run the server

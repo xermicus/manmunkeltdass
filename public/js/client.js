@@ -1,4 +1,4 @@
-var socket = io('http://localhost:1337');
+var socket = io('http://192.168.43.72:1337');
 
 function newmessage() { 
 	var msg = document.getElementById('input').value;
@@ -22,3 +22,10 @@ socket.on('emitpost', function(data) {
 	window.scrollTo(0,document.body.scrollHeight);
 });
 
+// Mobile click stuff
+
+/*$(document).keypress(function(e) {
+	if(e.which == 13) {
+		newmessage();//alert('You pressed enter!');
+        }
+});*/

@@ -237,6 +237,8 @@ a{
     margin-right: 4px;
 }
 
+/*
+no emoji support by now!
 emoji{
     display: inline-block;
     height: 18px;
@@ -257,7 +259,7 @@ emoji.moai{background-image: url(http://imgur.com/uSpaYy8.png);}
 emoji.suffocated{background-image: url(http://i.imgur.com/jfTyB5F.png);}
 emoji.scream{background-image: url(http://i.imgur.com/tOLNJgg.png);}
 emoji.hearth_blue{background-image: url(http://i.imgur.com/gR9juts.png);}
-emoji.funny{background-image: url(http://i.imgur.com/qKia58V.png);}
+emoji.funny{background-image: url(http://i.imgur.com/qKia58V.png);}*/
 
 @-webikt-keyframes pulse {
   from { opacity: 0; }
